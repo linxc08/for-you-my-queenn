@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine · Video spesialmu dalam bingkai</title>
+  <!-- Fonts romantis -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..600&display=swap" rel="stylesheet">
+  <!-- Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #fce4e4 0%, #fcc8d0 40%, #fba6b2 100%);
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* latar floating hearts */
+    body::before {
+      content: "❤️❤️❤️";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      font-size: 40px;
+      color: rgba(255, 230, 240, 0.3);
+      white-space: nowrap;
+      animation: floatHearts 20s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes floatHearts {
+      0% { transform: translateX(-20%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 56px 56px 48px 48px;
+      padding: 30px 30px 40px;
+      max-width: 820px;
+      width: 100%;
+      box-shadow: 0 30px 50px rgba(180, 60, 80, 0.3), 0 0 0 6px #fff9;
+      text-align: center;
+      z-index: 2;
+      transition: all 0.2s ease;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: #a12b4a;
+      text-shadow: 3px 3px 0 #ffe2e9;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+
+    .sub {
+      font-size: 1.1rem;
+      color: #c14764;
+      background: #ffeef2d0;
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 60px;
+      margin-bottom: 28px;
+      font-weight: 500;
+      backdrop-filter: blur(2px);
+      box-shadow: 0 4px 8px #fbb0c0;
+    }
+
+    /* BINGKAI ESTETIK VALENTINE */
+    .frame-valentine {
+      position: relative;
+      margin: 16px auto 24px;
+      max-width: 700px;
+      border-radius: 48px;
+      background: linear-gradient(45deg, #ffc0cb, #ff99aa, #ffc0cb);
+      padding: 18px;
+      box-shadow: 
+        0 25px 30px -10px #9f3e55,
+        0 0 0 4px #ffffffd9,
+        0 0 0 8px #fda5b8;
+    }
+
+    .frame-valentine::after {
+      content: "❤️";
+      position: absolute;
+      bottom: -15px;
+      right: -10px;
+      font-size: 48px;
+      filter: drop-shadow(0 8px 6px #d44e6b);
+      transform: rotate(10deg);
+      z-index: 5;
+    }
+
+    .frame-inner {
+      background: #2d0e15;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: inset 0 0 40px #ff96b0;
+      border: 3px solid #ffeef2;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 34px;
+      background: #1a0a0f;
+      box-shadow: 0 10px 18px black;
+      object-fit: contain;
+      max-height: 500px;
+    }
+
+    .love-note {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      font-size: 1.3rem;
+      color: #9f304a;
+      background: #ffeef2d6;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-family: 'Dancing Script', cursive;
+      font-weight: 600;
+      backdrop-filter: blur(2px);
+      border: 2px solid white;
+    }
+
+    .love-note i {
+      font-size: 2rem;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #b1596e;
+      background: #fff0f3bc;
+      padding: 10px 20px;
+      border-radius: 40px;
+    }
+
+    .instruction {
+      background: #ffe2e9cc;
+      border-radius: 30px;
+      padding: 8px 20px;
+      margin: 10px 0 5px;
+      font-size: 0.95rem;
+      color: #971b3a;
+      display: inline-block;
+      backdrop-filter: blur(2px);
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 2.5rem; }
+      .frame-valentine { padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>✨ untuk kamu ✨</h1>
+    <div class="sub">Halo Mutiara Sabriyanti</div>
+
+    <!-- Bingkai estetik dengan video langsung -->
+    <div class="frame-valentine">
+      <div class="frame-inner">
+        <!-- 
+          VIDEO SUMBER: 
+          Ganti 'happyvalentine.mp4' dengan nama file video Anda.
+          Letakkan file video di folder yang sama dengan halaman ini.
+        -->
+        <video id="player" controls playsinline>
+          <source src="happyvalentine.mp4" type="video/mp4">
+          <!-- fallback: jika browser tidak mendukung atau file tidak ditemukan -->
+          <p style="color:white; padding:20px;">Video tidak ditemukan. Pastikan file <code>happyvalentine.mp4</code> ada di folder yang sama.</p>
+        </video>
+      </div>
+    </div>
+
+    <!-- sentuhan hati -->
+    <div class="love-note">
+      <i>❤️</i> from me to you <i>❤️</i>
+    </div>
+
+    <footer>
+      🌹 semoga kamu suka yah cantik 🌹
+    </footer>
+
+    <!-- Tombol Logout untuk kembali ke halaman utama -->
+    <div style="margin-top: 30px; text-align: center;">
+      <button onclick="logout()" style="background: linear-gradient(135deg, #ff416c, #ff4b2b); color: white; border: none; padding: 15px 40px; border-radius: 60px; font-size: 1.2rem; font-weight: bold; cursor: pointer; box-shadow: 0 10px 20px rgba(255, 75, 43, 0.4); transition: transform 0.2s;">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </div>
+
+  <!-- Script untuk menangani error video dan fungsi logout -->
+  <script>
+    (function() {
+      const player = document.getElementById('player');
+      // Jika video gagal dimuat, tampilkan pesan tambahan
+      player.addEventListener('error', function() {
+        let errorMsg = document.createElement('div');
+        errorMsg.style.backgroundColor = '#ffd0d0';
+        errorMsg.style.color = '#a00';
+        errorMsg.style.padding = '12px';
+        errorMsg.style.borderRadius = '40px';
+        errorMsg.style.marginTop = '12px';
+        errorMsg.style.fontSize = '1rem';
+        errorMsg.innerHTML = '❌ Video tidak dapat diputar. Pastikan file <strong>happyvalentine.mp4</strong> tersedia dan formatnya didukung (MP4, WebM, dll).';
+        document.querySelector('.love-note').after(errorMsg);
+      }, { once: true });
+    })();
+
+    // Fungsi logout untuk kembali ke halaman utama (foryou.html)
+    function logout() {
+      window.location.href = "foryou.html";
+    }
+  </script>
+</body>
+</html>
